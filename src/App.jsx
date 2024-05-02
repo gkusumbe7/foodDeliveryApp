@@ -1,9 +1,9 @@
-import Main from './Component/Main'
+import GeekFood from './Project/GeekFood';
 import './App.css'
 function App() {
   return (
     <>
-      <Main />
+      <GeekFood />
     </>
   )
 }
