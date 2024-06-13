@@ -2,7 +2,7 @@ import googleplayImg from "../../assets/google-play.jpg";
 import facebook from "../../assets/icons8-facebook-48.png";
 import twitter from "../../assets/icons8-twitter-48.png"
 import instagram from "../../assets/icons8-instagram-48.png"
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 export default function Footer() {
