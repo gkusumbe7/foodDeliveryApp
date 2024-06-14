@@ -1,6 +1,6 @@
 import { useState } from "react";
 import foodImg from "../../assets/food-delivery-icon-clip-art-logo-simple-illustration-free-vector.jpg";
-
+import { NavLink } from "react-router-dom";
 function Navbar() {
   const[open, setOpen ] = useState(false);
 
@@ -16,7 +16,9 @@ function Navbar() {
                       alt="logo"
                        className="drop-shadow-xl h-12 border-4 border-black rounded-full"
                     />
-                   <p className="drop-shadow-xl text-md text-white font-semibold hover:text-black px-2 py-2">FreshMenu</p>
+                   <p className="drop-shadow-xl text-2xl text-white font-semibold hover:text-black px-2 py-2">
+                   <NavLink to="/">FreshMenu</NavLink> 
+                    </p>
               
                   </div>
                   
@@ -40,7 +42,8 @@ function Navbar() {
                         md:w-auto  pl-14 transition-all
                         flex md:flex-row flex-col md:bg-none 
                         md:bg-inherit
-                        lg:gap-2 
+                        bg-orange-400
+                        lg:gap-5
                         gap-2
                         text-black md:text-white
                         duration-0 ease-in ${open?'top-18':'top-[-490px]'} }`}>
@@ -49,33 +52,47 @@ function Navbar() {
                 name="search"
                 id="search-Input"
                 placeholder="Search...."
-                className="hidden  lg:block drop-shadow-xl p-2 text-sm  rounded-xl  hover:border-black h-10 "
+                className="hidden  lg:block drop-shadow-s p-2 text-sm  rounded-xl  hover:border-black h-10 "
               />
-              <a
-                href="#"
-                className="drop-shadow-xl  font-semibold hover:text-black px-1 py-1 hover:shadow-xl hover:bg-yellow-300 rounded-md"
-                >
-                Overview
-              </a>
-              <a
-                href="#"
-                className="drop-shadow-xl  font-semibold hover:text-black px-1 py-1 hover:shadow-xl hover:bg-yellow-300 rounded-md"
-                >
-                Food Order
-              </a>
-              <a
-                href="#"
-                className="drop-shadow-xl  font-semibold hover:text-black px-1 py-1 hover:shadow-xl hover:bg-yellow-300 rounded-md"
+              <li  className="">
+               <NavLink
+                to="/help"
+                className={({ isActive }) => 
+                  isActive ? "drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "px-1 py-1 drop-shadow-xl px-1 py-1 font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
+                }
+              >
+                Help
+              </NavLink>
+              </li>
+              <NavLink
+                to="/cart"
+                className={({ isActive }) => 
+                  isActive ? "drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "drop-shadow-xl px-1 py-1 font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
+                }
+              >
+                Food Cart
+              </NavLink>
+              <li  className="">
+                <NavLink
+                to="/favorite"
+                className={({ isActive }) => 
+                  isActive ? "drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "drop-shadow-xl px-1 py-1 font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
+                }
               >
                 Favorite
-              </a>
+              </NavLink>
+              </li>
              
-              <a
-                href="#"
-                className="drop-shadow-xl  font-semibold hover:text-black px-1 py-1 hover:shadow-xl hover:bg-yellow-300 rounded-md"
-                >
+              <li className="">
+                <NavLink
+                to="/sign"
+                className={({ isActive }) => 
+                  isActive ? "drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "drop-shadow-xl px-1 py-1 font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
+                }
+              >
                 Sign In
-              </a>
+              </NavLink>
+              </li>
             </ul>
           </div>
         </nav>
