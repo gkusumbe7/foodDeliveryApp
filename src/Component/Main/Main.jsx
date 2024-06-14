@@ -36,7 +36,7 @@ export default function Main() {
             <img src={img2} alt="img2" />
           </div>
         </section>
-      <section className="mx-4 md:mt-24">
+      <section className="mx-4 mt-24 md:mt-0">
       <h1 className="text-xl font-semibold mt-5 pl-8">CATEGORIES</h1>
           <h1 className="font-bold text-xl mx-10 mb-5"></h1>
           <div className="flex overflow-x-auto p-1">
