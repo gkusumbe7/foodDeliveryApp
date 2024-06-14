@@ -6,7 +6,7 @@ function Navbar() {
 
    return (
     <>
-      <div className="fixed top-0 w-full z-10 ">
+      <div className="fixed top-0 w-full z-10">
         <nav  className="bg-gradient-to-r from-orange-500 to-orange-400 py-2 drop-shadow-xl">
           <div className="container mx-auto md:flex md:items-center justify-between px-3">
             <div className="flex md:flex-none  justify-between items-center ">

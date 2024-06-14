@@ -29,14 +29,14 @@ export default function Main() {
   return (
     <>
       <main className="ml-12 mr-12">
-        <section>
+        <section className="hidden lg:block">
           <div className="flex justify-around h-72 gap-3 mt-20 p-2 drop-shadow-xl ">
-            <img src={img1} alt="img1" />
+            <img src={img1} alt="img1"  className=""/>
             <img src={img3} alt="img3" />
             <img src={img2} alt="img2" />
           </div>
         </section>
-      <section className="mx-4">
+      <section className="mx-4 md:mt-24">
       <h1 className="text-xl font-semibold mt-5 pl-8">CATEGORIES</h1>
           <h1 className="font-bold text-xl mx-10 mb-5"></h1>
           <div className="flex overflow-x-auto p-1">

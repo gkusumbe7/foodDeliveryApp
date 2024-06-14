@@ -8,10 +8,10 @@ import instagram from "../../assets/icons8-instagram-48.png"
 export default function Footer() {
   return (
     <>
-      <hr className="mt-4" />
-      <div className="ml-20 mr-20 mb-10">
-        <section className="mt-5 flex justify-between">
-          <div className=" flex gap-14 text-gray-500">
+      <hr className="mt-4 " />
+      <div className= " border md:p-5 lg:px-14 md:px-2 ml-20 mr-20 mb-10 md:ml-0 md:mr-0 md:mb-0">
+        <section className="mt-5 lg:flex justify-between">
+          <div className=" lg:flex gap-14 text-gray-500">
             <div className="flex flex-col gap-5 text-sm font-bold">
               <a href="">
                 <p className="text-md text-gray-400 font-bold ">COMPANY</p>
@@ -68,13 +68,14 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 text-sm font-bold text-gray-500">
+          <div className="flex md:p-10 flex-col gap-6 text-sm font-bold text-gray-500">
             <p>SUBSCRIBE TO OUR DROOLWORTHY NEWSLETTER</p>
             
-            <div className="border hover:border-orange-300 p-1  flex  gap-10">
-            <input type="search" className="px-3 py-2 border" placeholder="Enter your email" name="" id="emailId" /><button className="border hover:text-yellow-50 px-2 rounded-xl hover:bg-orange-500">Subscribe</button>
+            <div className="border hover:border-orange-300 p-1  lg:flex  gap-10">
+            <input type="search" className="px-3 py-2 border" placeholder="Enter your email" name="" id="emailId" />
+            <button className="border hover:text-yellow-50 px-2 rounded-xl hover:bg-orange-500">Subscribe</button>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="lg:flex items-center gap-4">
                 <img src={googleplayImg} className="h-10" alt="googleplayImg" />
                 <img src={facebook} className="h-8" alt="facebook" />
                 <img src={twitter} className="h-8" alt="twitter" />
