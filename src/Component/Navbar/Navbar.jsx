@@ -17,7 +17,7 @@ function Navbar() {
                        className="drop-shadow-xl h-12 border-4 border-black rounded-full"
                     />
                    <p className="drop-shadow-xl text-2xl text-white font-semibold hover:text-black px-2 py-2">
-                   <NavLink to="/">FreshMenu</NavLink> 
+                   <NavLink to="/">F&D Menu</NavLink> 
                     </p>
               
                   </div>

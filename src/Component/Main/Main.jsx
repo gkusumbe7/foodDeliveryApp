@@ -17,6 +17,8 @@ import axios from "../../API/axios"
 export default function Main() {
   const [myData , setMyData ] = useState([]);
   const [isError , setError] = useState("");
+  const [selectCategory , setCategory] = useState("");
+  const [categoriesWiseData, setCategoryWiseData ] = useState([]);
 
   useEffect(()=>{
       axios
@@ -25,7 +27,19 @@ export default function Main() {
       .catch((error)=>setError(error.message))
   },[])
 
-  console.log(myData)
+  console.log(categoriesWiseData)
+
+  useEffect(()=>{
+    if(selectCategory)
+    axios
+    .get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectCategory}`)
+    .then((res)=>setCategoryWiseData(res.data.meals))
+    .catch((error)=>console.log(error.message));
+  },[selectCategory])
+
+  function selectCategories(e){
+    setCategory(e.currentTarget.getAttribute("value"))
+  }
   return (
     <>
       <main className="ml-12 mr-12">
@@ -41,7 +55,10 @@ export default function Main() {
           <h1 className="font-bold text-xl mx-10 mb-5"></h1>
           <div className="flex overflow-x-auto p-1">
           {myData.map((data)=>(
-              <div className="flex flex-col items-center text-sm shadow-xl rounded-lg bg-orange-400 hover:bg-orange-500 font-semibold p-2 m-2 text-center">
+              <div 
+              value={data.strCategory}
+              onClick={selectCategories}
+              className="cursor-pointer flex flex-col items-center text-sm shadow-xl rounded-lg bg-orange-400 hover:bg-orange-500 font-semibold p-2 m-2 text-center">
                 <div className="w-20">
                 <img src={data.strCategoryThumb} alt="categories-img" className="" />
                 </div>
@@ -49,8 +66,23 @@ export default function Main() {
               </div>
              ))}
           </div>
-            
       </section>
+        <section >
+        <h1 className="text-xl font-semibold my-10 mx-8">ALL {selectCategory.toUpperCase()} MEAL</h1>
+        <div className="flex flex-wrap gap-3 justify-center">
+        {categoriesWiseData.map((data)=>(
+          <div className="flex flex-col gap-1 " key={data.idMeal}>
+          <div className="w-32"> 
+           <img src={data.strMealThumb} alt="img" 
+           className="rounded-3xl"/>
+          </div>
+          <p className="text-wrap w-32 text-sm text-center font-bold">{data.strMeal}</p>
+          </div>
+         ))}
+        </div>
+         
+          
+        </section>
 
         <section className=" drop-shadow-xl">
           <div className="m-8 p-5 flex justify-between">
