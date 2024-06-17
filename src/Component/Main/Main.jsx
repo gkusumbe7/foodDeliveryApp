@@ -50,7 +50,7 @@ export default function Main() {
             <img src={img2} alt="img2" />
           </div>
         </section>
-      <section className="mt-24 md:mt-0">
+      <section className="mt-34 md:mt-0">
       <h1 className="text-xl font-semibold mt-5">CATEGORIES</h1>
           <h1 className="font-bold text-xl mb-5"></h1>
           <div className="flex overflow-x-auto p-1">
