@@ -42,7 +42,7 @@ export default function Main() {
   }
   return (
     <>
-      <main className="ml-12 mr-12">
+      <main className="ml-5 mr-5">
         <section className="hidden lg:block">
           <div className="flex justify-around h-72 gap-3 mt-20 p-2 drop-shadow-xl ">
             <img src={img1} alt="img1"  className=""/>
@@ -50,9 +50,9 @@ export default function Main() {
             <img src={img2} alt="img2" />
           </div>
         </section>
-      <section className="mx-4 mt-24 md:mt-0">
-      <h1 className="text-xl font-semibold mt-5 pl-8">CATEGORIES</h1>
-          <h1 className="font-bold text-xl mx-10 mb-5"></h1>
+      <section className="mt-24 md:mt-0">
+      <h1 className="text-xl font-semibold mt-5">CATEGORIES</h1>
+          <h1 className="font-bold text-xl mb-5"></h1>
           <div className="flex overflow-x-auto p-1">
           {myData.map((data)=>(
               <div 
@@ -68,32 +68,30 @@ export default function Main() {
           </div>
       </section>
         <section >
-        <h1 className="text-xl font-semibold my-10 mx-8">ALL {selectCategory.toUpperCase()} MEAL</h1>
+        <h1 className="text-xl font-semibold my-10 ">ALL {selectCategory.toUpperCase()} MEAL</h1>
         <div className="flex flex-wrap gap-3 justify-center">
         {categoriesWiseData.map((data)=>(
           <div className="flex flex-col gap-1 " key={data.idMeal}>
-          <div className="w-32"> 
+          <div className="w-28"> 
            <img src={data.strMealThumb} alt="img" 
            className="rounded-3xl"/>
           </div>
           <p className="text-wrap w-32 text-sm text-center font-bold">{data.strMeal}</p>
           </div>
          ))}
-        </div>
-         
-          
+        </div>         
         </section>
 
-        <section className=" drop-shadow-xl">
-          <div className="m-8 p-5 flex justify-between">
+        <section className="drop-shadow-xl">
+          <div className="flex justify-between">
             <h1 className="text-xl font-semibold">ALL DAY BREAKFAST</h1>
             <section>
               <option value="All">All</option>
             </section>
           </div>
           
-          <div className="flex flex-wrap gap-5">
-            <div className="border-2 border-gray-40 mx-10 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
+          <div className="flex flex-wrap justify-center mt-10 gap-5">
+            <div className="border-2 border-gray-40 mx-2 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
               <div className="flex gap-2">
                 <img src={veg} alt="veglogo" className="h-5" />
                 <p className="text-md font-mono">CONTINENTAL</p>
@@ -113,7 +111,7 @@ export default function Main() {
                 </button>
               </div>
             </div>
-            <div className="border-2 border-gray-40 mx-10 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
+            <div className="border-2 border-gray-40 mx-2 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
               <div className="flex gap-2">
                 <img src={nonveg} alt="veglogo" className="h-5" />
                 <p className="text-md font-mono">CONTINENTAL</p>
@@ -133,7 +131,7 @@ export default function Main() {
                 </button>
               </div>
             </div> 
-            <div className="border-2 border-gray-40 mx-10 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
+            <div className="border-2 border-gray-40 mx-2 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
               <div className="flex gap-2">
                 <img src={veg} alt="veglogo" className="h-5" />
                 <p className="text-md font-mono">CONTINENTAL</p>
@@ -153,7 +151,7 @@ export default function Main() {
                 </button>
               </div>
             </div> 
-            <div className="border-2 border-gray-40 mx-10 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
+            <div className="border-2 border-gray-40 mx-2 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
               <div className="flex gap-2">
                 <img src={veg} alt="veglogo" className="h-5" />
                 <p className="text-md font-mono">CONTINENTAL</p>
@@ -173,7 +171,7 @@ export default function Main() {
                 </button>
               </div>
             </div>
-            <div className="border-2 border-gray-40 mx-10 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
+            <div className="border-2 border-gray-40 mx-2 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
               <div className="flex gap-2">
                 <img src={nonveg} alt="veglogo" className="h-5" />
                 <p className="text-md font-mono">CONTINENTAL</p>
@@ -193,8 +191,8 @@ export default function Main() {
                 </button>
               </div>
             </div>
-            <div className="border-2 border-gray-40 mx-10 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
-              <div className="flex gap-2">
+            <div className="border-2 border-gray-40 mx-2 flex w-80  flex-col text-gray-800 font-semibold p-3 gap-1 rounded-md ">
+            <div className="flex gap-2">
                 <img src={veg} alt="veglogo" className="h-5" />
                 <p className="text-md font-mono">CONTINENTAL</p>
               </div>
