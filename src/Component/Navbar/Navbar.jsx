@@ -54,6 +54,18 @@ function Navbar() {
                 placeholder="Search...."
                 className="hidden  lg:block drop-shadow-s p-2 text-sm  rounded-xl  hover:border-black h-10 "
               />
+              <li  className="font-bold">
+               <NavLink
+                to="/explore"
+                className={({ isActive }) => 
+                  isActive ? "flex justify-center items-center  gap-1 drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "px-1 py-1 drop-shadow-xl px-1 py-1 font-semibold text-white rounded-md "
+                }
+              >
+                <span className="text-xl text-center pt-1"><ion-icon name="compass"></ion-icon></span>
+                <span className="px-1">Explore</span>
+              </NavLink>
+              </li>
+              
               <li  className="">
                <NavLink
                 to="/help"
@@ -64,6 +76,7 @@ function Navbar() {
                 Help
               </NavLink>
               </li>
+              
               <NavLink
                 to="/cart"
                 className={({ isActive }) => 

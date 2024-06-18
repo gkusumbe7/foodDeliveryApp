@@ -85,9 +85,7 @@ export default function Main() {
         <section className="drop-shadow-xl">
           <div className="flex justify-between">
             <h1 className="text-xl font-semibold">ALL DAY BREAKFAST</h1>
-            <section>
-              <option value="All">All</option>
-            </section>
+            
           </div>
           
           <div className="flex flex-wrap justify-center mt-10 gap-5">

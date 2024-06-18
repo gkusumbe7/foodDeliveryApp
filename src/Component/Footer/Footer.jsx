@@ -71,8 +71,8 @@ export default function Footer() {
           <div className="flex md:p-10 flex-col gap-6 text-sm font-bold text-gray-500">
             <p>SUBSCRIBE TO OUR DROOLWORTHY NEWSLETTER</p>
             
-            <div className="border hover:border-orange-300 p-1  lg:flex  gap-10">
-            <input type="search" className="px-3 py-2 border" placeholder="Enter your email" name="" id="emailId" />
+            <div className="p-1  lg:flex  gap-10">
+            <input type="search" className="px-2 py-1 border" placeholder="Enter your email" name="" id="emailId" />
             <button className="border hover:text-yellow-50 px-2 hover:bg-orange-500 m-2 p-2">Subscribe</button>
             </div>
             <div className="lg:flex flex items-center gap-4">

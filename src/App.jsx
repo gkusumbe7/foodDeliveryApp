@@ -4,6 +4,7 @@ import Cart from './Pages/Cart/Cart';
 import Help from './Pages/Help/Help';
 import Sign from './Pages/SignIn/SignIn';
 import Favorite from './Pages/Favorite/Favorite';
+import Explore from './Pages/Explore/Explore';
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       <Route path='/help' element={<Help/>}/>
       <Route path='/sign' element={<Sign/>}/>
       <Route path='/favorite' element={<Favorite/>}/>
+      <Route path='/explore' element={<Explore/>}/>
     </Routes>
     </BrowserRouter>
     </>
