@@ -58,7 +58,7 @@ export default function Main() {
               <div 
               value={data.strCategory}
               onClick={selectCategories}
-              className="cursor-pointer flex flex-col items-center text-sm shadow-xl rounded-lg bg-orange-400 hover:bg-orange-500 font-semibold p-2 m-2 text-center">
+              className="cursor-pointer flex flex-col items-center text-sm shadow-xl rounded-lg bg-gradient-to-b from-yellow-400 to-orange-100  font-semibold p-2 m-2 text-center">
                 <div className="w-20">
                 <img src={data.strCategoryThumb} alt="categories-img" className="" />
                 </div>
