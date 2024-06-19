@@ -52,60 +52,58 @@ function Navbar() {
                 name="search"
                 id="search-Input"
                 placeholder="Search...."
-                className="hidden  lg:block drop-shadow-s p-2 text-sm  rounded-xl  hover:border-black h-10 "
+                className="hidden  lg:hidden drop-shadow-s p-2 text-sm  rounded-xl  hover:border-black h-10 "
               />
-              <li  className="font-bold">
+              <li  className="flex px-1 items-center">
                <NavLink
                 to="/explore"
                 className={({ isActive }) => 
-                  isActive ? "flex justify-center items-center  gap-1 drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "px-1 py-1 drop-shadow-xl px-1 py-1 font-semibold text-white rounded-md "
+                  isActive ? "flex gap-1 p-1 drop-shadow-xl  font-semibold  shadow-xl bg-yellow-300 rounded-md text-black" : " flex gap-1 p-1 drop-shadow-xl  font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
                 }
               >
-                <span className="text-xl text-center pt-1"><ion-icon name="compass"></ion-icon></span>
-                <span className="px-1">Explore</span>
+                <p className="text-xl"><ion-icon name="compass"></ion-icon></p>
+                <p className="">Explore</p>
               </NavLink>
               </li>
               
-              <li  className="">
+              <li  className="flex items-center">
+               <NavLink
+                to="/cart"
+                className={({ isActive }) => 
+                  isActive ? "flex gap-1 p-1 drop-shadow-xl  font-semibold  shadow-xl bg-yellow-300 rounded-md text-black" : " flex gap-1 p-1 drop-shadow-xl  font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
+                }
+              >
+                <p className="text-xl "><ion-icon name="cart"></ion-icon></p>
+                <p className="">Food Cart</p>
+              </NavLink>
+              </li>
+
+              <li  className="flex items-center">
+               <NavLink
+                to="/favorite"
+                className={({ isActive }) => 
+                  isActive ? "flex gap-1 p-1 drop-shadow-xl  font-semibold  shadow-xl bg-yellow-300 rounded-md text-black" : " flex gap-1 p-1 drop-shadow-xl  font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
+                }
+              >
+                <p className="text-xl "><ion-icon name="heart"></ion-icon></p>
+                <p className="">Favorite</p>
+              </NavLink>
+              </li>
+
+              <li  className="flex items-center">
                <NavLink
                 to="/help"
                 className={({ isActive }) => 
-                  isActive ? "drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "px-1 py-1 drop-shadow-xl px-1 py-1 font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
+                  isActive ? "flex gap-1 p-1 drop-shadow-xl  font-semibold  shadow-xl bg-yellow-300 rounded-md text-black" : " flex gap-1 p-1 drop-shadow-xl  font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
                 }
               >
-                Help
+                <p className="text-xl "><ion-icon name="help-circle"></ion-icon></p>
+                <p className="">Help</p>
               </NavLink>
               </li>
+
               
-              <NavLink
-                to="/cart"
-                className={({ isActive }) => 
-                  isActive ? "drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "drop-shadow-xl px-1 py-1 font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
-                }
-              >
-                Food Cart
-              </NavLink>
-              <li  className="">
-                <NavLink
-                to="/favorite"
-                className={({ isActive }) => 
-                  isActive ? "drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "drop-shadow-xl px-1 py-1 font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
-                }
-              >
-                Favorite
-              </NavLink>
-              </li>
-             
-              <li className="">
-                <NavLink
-                to="/sign"
-                className={({ isActive }) => 
-                  isActive ? "drop-shadow-xl px-1 py-1 shadow-xl bg-yellow-300 rounded-md font-semibold text-black" : "drop-shadow-xl px-1 py-1 font-semibold text-white hover:shadow-xl hover:bg-yellow-300 rounded-md hover:text-black"
-                }
-              >
-                Sign In
-              </NavLink>
-              </li>
+              
             </ul>
           </div>
         </nav>
